@@ -17,6 +17,6 @@ module "ec2" {
   public_sg_id  = module.vpc.public_sg_id
   instance_type = var.instance_type
 
-  # pass the user-data script content to the module (file from root)
+  
   user_data = file("${path.module}/user_data.sh")
 }

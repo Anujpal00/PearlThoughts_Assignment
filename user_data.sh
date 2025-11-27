@@ -46,6 +46,6 @@ docker run -d \
   -v /opt/strapi-data:/srv/app \
   strapi/strapi:latest
 
-# Wait a bit and show container logs to cloud-init log for debugging
+# Wait for a bit and log the container logs to a file for debugging
 sleep 8
 docker logs strapi --tail 50 >> /var/log/strapi_container.log || true
